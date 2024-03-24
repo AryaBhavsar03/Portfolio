@@ -10,6 +10,29 @@
     <link rel="Stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
+    <script>
+        window.addEventListener('scroll', function() {
+            var sections = document.querySelectorAll('section');
+            var navLinks = document.querySelectorAll('.nav-link');
+
+            var currentSectionIndex = 0;
+            var currentSectionOffset = Math.abs(sections[0].getBoundingClientRect().top);
+
+            for (var i = 1; i < sections.length; i++) {
+                var sectionOffset = Math.abs(sections[i].getBoundingClientRect().top);
+                if (sectionOffset < currentSectionOffset) {
+                    currentSectionIndex = i;
+                    currentSectionOffset = sectionOffset;
+                }
+            }
+
+            for (var i = 0; i < navLinks.length; i++) {
+                navLinks[i].classList.remove('active');
+            }
+
+            navLinks[currentSectionIndex].classList.add('active');
+        });
+    </script>
     <!--Main Container-->
     <div class="main-container">
         <!--Side Menu-->
@@ -23,7 +46,8 @@
             <ul class="nav">
                 <li><a href="#home" class="active nav-link"><i class="fa-solid fa-house"></i>Home</a></li>
                 <li><a href="#about" class="nav-link"><i class="fa-solid fa-user"></i>About</a></li>
-                <li><a href="#education" class="nav-link"><i class="fa-solid fa-graduation-cap"></i>Education</a></li>
+                <li><a href="#skills" class="nav-link"><i class="fa-solid fa-tools"></i>Skills</a></li>
+                <li><a href="#experience" class="nav-link"><i class="fa-solid fa-graduation-cap"></i>Experience</a></li>
                 <li><a href="#project" class="nav-link"><i class="fa-solid fa-briefcase"></i>Projects</a></li>
             </ul>
         </div>
@@ -102,41 +126,106 @@
                     </div>
                 </div>
             </section>
-            <section id="education" class="education section">
+            <section id="skills" class="skills section">
                 <div class="container">
                     <div class="row">
                         <div class="section-title padd-15">
-                            <h2>Education</h2>
+                            <h2>Skills</h2>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="education-content padd-15">
+                        <div class="skills-content padd-15">
+                            <div class="row">
+                                <div class="section-divider"></div>
+                            </div>
+                            <div class="skills-wrapper">
+                                <div class="skills-section" style="background-color: white; border-radius: 15px;">
+                                    <h1><i class="fa-solid fa-code section-icon"></i></h1>
+                                    <h3 class="section-title">Front-End Skills</h3>
+                                    <ul class="skills-list">
+                                        <li>▸ HTML</li>
+                                        <li>▸ CSS</li>
+                                        <li>▸ JavaScript</li>
+                                        <li>▸ Python</li>
+                                        <li>▸ Java</li>
+                                    </ul>
+                                </div>
+                                <div class="skills-section" style="background-color: white; border-radius: 15px;">
+                                    <h1><i class="fa-brands fa-angular section-icon"></i></h1>
+                                    <h3 class="section-title">Back-End Skills</h3>
+                                    <ul class="skills-list">
+                                        <li>▸ Angular</li>
+                                        <li>▸ MySQL</li>
+                                        <li>▸ C#</li>
+                                        <li>▸ Node JS</li>
+                                    </ul>
+                                </div>
+                                <div class="skills-section" style="background-color: white; border-radius: 15px;">
+                                    <h1><i class="fa-solid fa-screwdriver-wrench section-icon"></i></h1>
+                                    <h3 class="section-title">Other</h3>
+                                    <ul class="skills-list">
+                                        <li>▸ Git</li>
+                                        <li>▸ Adaptabilty</li>
+                                        <li>▸ Critical Thinking</li>
+                                        <li>▸ Problem Solving</li>
+                                        <li>▸ Quick Learner</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="experience" class="experience section">
+                <div class="container">
+                    <div class="row">
+                        <div class="section-title padd-15">
+                            <h2>Experience</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="experience-content padd-15">
                             <div class="row">
                                 <div class="timeline-box padd-15">
                                     <div class="timeline shadow-dark">
                                         <div class="timeline-item">
                                             <div class="circle-dot">
                                                 <h3 class="timeline-date">
-                                                    <i class="fa-solid fa-calendar"></i> 2017-2021
+                                                    <i class="fa-solid fa-calendar"></i> 2024 - Present
                                                 </h3>
-                                                <h4 class="timeline-title">John P Stevens High School</h4>
-                                                <p>▸ Learned the basics of HTML and CSS.</p>
-                                                <p>▸ Learned simple pyhton and javascript art and how to do aretmethic equations.</p>
-                                            </div>
-                                        </div>
-                                        <div class="timeline-item">
-                                            <div class="circle-dot">
-                                                <h3 class="timeline-date">
-                                                    <i class="fa-solid fa-calendar"></i> 2023-2024
-                                                </h3>
-                                                <h4 class="timeline-title">Bethel Tech</h4>
-                                                <p>▸ Learned advanced HTML and CSS</p>
-                                                <p>▸ Learned to use JavaScript, Node JS in a more sophisticated manner.</p>
-                                                <p>▸ Leanred the foundations of programing using C#</p>
-                                                <p>▸ Learned frontend frameworks using Angular </p>
-                                                <p>▸ Learned databases</p>
-                                                <p>▸ Learned Backend Frameworks</p>
-                                                <p>▸ Expected to learn Deployment and Cloud Security, Data Structures, Algorithms, & Aglie Methodologies and Ionic Angular.</p>
+                                                <h4 class="timeline-title">Sunken Services, LLC - Game Developer</h4>
+                                                <p>▸ Enhanced player experience by designing and implementing
+                                                    engaging game levels and mechanics.
+                                                </p>
+                                                <br>
+                                                <p>▸ Streamlined game development process for increased efficiency
+                                                    through collaboration with cross-functional teams.
+                                                </p>
+                                                <br>
+                                                <p>
+                                                    ▸ Optimized game performance by identifying and resolving technical
+                                                    issues, ensuring smooth gameplay on various platforms.
+                                                </p>
+                                                <br>
+                                                <p>
+                                                    ▸ Developed innovative gameplay mechanics to provide challenging
+                                                    and enjoyable gaming experiences.\
+                                                </p>
+                                                <br>
+                                                <p>
+                                                    ▸ Contributed to successful project completions by adhering to strict
+                                                    deadlines and effectively managing time and resources.
+                                                </p>
+                                                <br>
+                                                <p>
+                                                    ▸ Developed and maintained game features, including player
+                                                    profiles, in-game currency, and leaderboards.
+                                                </p>
+                                                <br>
+                                                <p>
+                                                    ▸ Improved overall game quality with thorough playtesting, identifying
+                                                    areas needing improvement or adjustment.        
+                                                </p>                                            
                                             </div>
                                         </div>
                                     </div>

@@ -299,7 +299,6 @@ h3.slogan {
   border-bottom: 10px solid var(--skin-color);
   border-right: 10px solid var(--skin-color);
   right: -10px;
-  bottom: -10px;
 }
 
 .home-img::before {
@@ -403,16 +402,18 @@ h3.slogan {
   max-width: 40%;
   margin-top: 40px;
 }
-.education .education-content {
+
+.experience .experience-content {
   flex: 0 0 100%;
   max-width: 100%;
 }
 
-.education .education-content .timeline-box {
+.experience .experience-content .timeline-box {
   flex: 0 0 100%;
   max-width: 100%;
 }
-.education .education-content .timeline {
+
+.experience .experience-content .timeline {
   background-color: var(--bg-black-100);
   padding: 30px 15px;
   border: 1px solid var(--bg-black-50);
@@ -420,24 +421,29 @@ h3.slogan {
   width: 100%;
   position: relative;
 }
-.education .education-content .timeline .timeline-item {
+
+.experience .experience-content .timeline .timeline-item {
   position: relative;
   padding-left: 37px;
   padding-bottom: 50px;
 }
-.education .education-content .timeline .timeline-item:last-child {
+
+.experience .experience-content .timeline .timeline-item:last-child {
   padding-bottom: 0;
 }
-.education .education-content .timeline .timeline-date {
+
+.experience .experience-content .timeline .timeline-date {
   font-weight: 800;
   font-size: 14px;
   margin-bottom: 12px;
   color: var(--text-black-700);
 }
-.education .education-content .timeline .timeline-date .fa-solid {
+
+.experience .experience-content .timeline .timeline-date .fa-solid {
   margin-right: 5px;
 }
-.education .education-content .timeline .timeline-title {
+
+.experience .experience-content .timeline .timeline-title {
   font-weight: 700;
   font-size: 18px;
   margin-bottom: 15px;
@@ -510,4 +516,50 @@ h3.slogan {
     flex: 0 0 100%;
     max-width: 100%;
   }
+}
+
+.skills-wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.skills-section {
+  background-color: white;
+  border-radius: 15px;
+  margin: 25px;
+  box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
+  width: 300px;
+  height: 500px;
+}
+
+.skills-list {
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.skills-section .section-title {
+  padding-top: 5px;
+  text-align: center;
+}
+
+.skills .skills-content .skills-section .skills-list li {
+  font-weight: 200;
+  padding: 10px 0;
+  font-size: 16px;
+  color: var(--text-black-900);
+  border-bottom: 1px solid var(--bg-black-50);
+}
+
+.skills .skills-content .skills-section .skills-list li span {
+  font-weight: 400;
+  color: var(--text-black-700);
+  margin-left: 4px;
+  display: inline-block;
+}
+
+.skills-section .section-icon {
+  padding-top: 50px;
+  display: block;
+  text-align: center;
 }
